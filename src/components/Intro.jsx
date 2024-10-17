@@ -8,9 +8,9 @@ function Intro({image}) {
           <div className="max-h-full flex w-1/2 overflow-hidden ">
             <img src={image} alt="photo" className="object-cover w-full hover:scale-110 transition hover:rounded-lg  " />
           </div>
-          <div className="max-h-full uppercase font-semibold font-serif flex justify-center items-center text-3xl  w-1/2">
+          <div className="max-h-full uppercase font-semibold font-serif flex justify-center items-center text-3xl select-none  w-1/2">
             <div>
-              <h1>i am a <span className="text-blue-500 font-bold font-sans" >web-devloper</span></h1>
+              <h1>I am   <span className="text-blue-500 font-bold font-sans" >Janak shukla</span></h1>
               <p className="mt-16  text-gray-4
               00 text-sm font-extralight text-balance">
                 I am a proficient MERN stack developer with expertise in
