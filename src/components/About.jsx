@@ -2,19 +2,15 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Footprints, X } from "lucide-react";
 import { react, useState } from "react";
- import css3 from "../assets/css.svg";
- import html5 from "../assets/html.svg";
-  import js from "../assets/javascript.svg";
-  import reactjs from "../assets/react.svg";
-  import tailwind from "../assets/tailwind.svg";
-  import github from "../assets/github.svg";
-  import mongodb from "../assets/mongodb.svg";
-  import express from "../assets/express.svg";
-  import nodejs from "../assets/node.svg";
-
-
-
-
+import css3 from "../assets/css.svg";
+import html5 from "../assets/html.svg";
+import js from "../assets/javascript.svg";
+import reactjs from "../assets/react.svg";
+import tailwind from "../assets/tailwind.svg";
+import github from "../assets/github.svg";
+import mongodb from "../assets/mongodb.svg";
+import express from "../assets/express.svg";
+import nodejs from "../assets/node.svg";
 
 export const About = () => {
   const [popup, setpopup] = useState(false);
@@ -61,11 +57,10 @@ export const About = () => {
                 Senior Secondary (XII), Board Of Secondary Education Bhopal
                 <span className="absolute right-0">2022</span>
               </h1>
-              <h2>Neha Higher Secondary School Padariya
-              </h2>
+              <h2>Neha Higher Secondary School Padariya</h2>
               <h5>89.2%</h5>
               <h1 className="text-2xl mt-5">
-              Secondary (X), Board Of Education Bhopal
+                Secondary (X), Board Of Education Bhopal
                 <span className="absolute right-0">2020</span>
               </h1>
               <h2>Neha Higher Secondary School Padariya</h2>
@@ -76,20 +71,19 @@ export const About = () => {
               skills
             </h1>
             <div className="flex gap-2 ">
-          
               <img src={html5} alt="html5" className=" size-16" />
               <img src={css3} alt="css3" className=" size-16" />
               <img src={js} alt="js" className=" size-16" />
               <img src={reactjs} alt="reactjs" className=" size-16" />
               <img src={tailwind} alt="tailwind" className=" size-24" />
-              <img src={express} alt="express" className=" brightness-200 size-24" />
+              <img
+                src={express}
+                alt="express"
+                className=" brightness-200 size-24"
+              />
               <img src={github} alt="github" className=" size-16" />
               <img src={mongodb} alt="mongodb" className=" size-24" />
               <img src={nodejs} alt="nodejs" className=" size-24" />
-
-
-
-         
             </div>
           </div>
           <X
