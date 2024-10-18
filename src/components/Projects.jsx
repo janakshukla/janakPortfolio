@@ -2,6 +2,9 @@ import { Presentation } from 'lucide-react'
 import { useState } from 'react'
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import janakdadhaba from '../assets/janakdadhaba.png'
+import fundraw from '../assets/fundraw.png'
+import blog from '../assets/blog.png'
 import { X } from 'lucide-react'
 
 export const Projects = () => {
@@ -15,46 +18,48 @@ export const Projects = () => {
   }, [popup]);
   const projects =[
     {
-      title: "Project 1",
-      description: "This is a description of project 1",
-      image: "https://via.placeholder.com/150",
-      link: "https://www.google.com",
-      codelink:"https://www.google.com"
+      title: "food recipe",
+      description: "A food recipe web app mainly focus on ui uses react js and tailwind css and uses mealdb api for data and basic animation using gsap",
+      image: janakdadhaba,
+      link: "https://github.com/janakshukla/food_recipe",
+      codelink:"https://janakdadhaba.vercel.app/"
     },
     {
-      title: "Project 2",
-      description: "This is a description of project 2",
-      image: "https://via.placeholder.com/150",
-      link: "https://www.google.com",
-       codelink:"https://www.google.com"
+      title: "multi-user drawing web",
+      description: "A multiuser supported drawing app where you can share the link and draw with your friends uses reactjs and websocket for real time data sharing",
+      image: fundraw,
+      link: "https://github.com/janakshukla/drawingapp",
+       codelink:"https://drawingapp-ten.vercel.app/"
     },
     {
-      title: "Project 2",
-      description: "This is a description of project 2",
-      image: "https://via.placeholder.com/150",
-      link: "https://www.google.com",
-       codelink:"https://www.google.com"
+      title: "Blog app",
+      description: "A blog app(more liking a twitter clone) made with react js &tailwind css in front end and used appwrite cloud services forbackend and database",
+      image: blog,
+      link: "https://github.com/janakshukla/blog-app",
+       codelink:"https://blog-app-khaki-three.vercel.app/"
     },
-    {
-      title: "Project 2",
-      description: "This is a description of project 2",
-      image: "https://via.placeholder.com/150",
-      link: "https://www.google.com",
-       codelink:"https://www.google.com"
-    }
+    
   ];
   const miniprojects =[
     {
-      title:"project 1",
-      link:"https://www.google.com",
+      title:"videostreaming webapp",
+      link:"https://github.com/janakshukla/VIDEO_STREAMING",
     },
     {
-      title:"project 1",
-      link:"https://www.google.com",
+      title:"password genrator",
+      link:"https://github.com/janakshukla/password-genartor",
     },
     {
-      title:"project 1",
-      link:"https://www.google.com",
+      title:"weather app",
+      link:"https://github.com/janakshukla/weather_app",
+    },
+    {
+      title:"currency converter",
+      link:"https://github.com/janakshukla/02-currency-converter",
+    },
+    {
+      title:"todo app",
+      link:"https://github.com/janakshukla/to-do-list",
     }]
 
   return (
@@ -81,7 +86,7 @@ export const Projects = () => {
                 <h1 className='font-semibold text-xl' >{project.title}</h1>
                 <p className='text-[0.7rem]' >{project.description}</p>
               </div>
-              <div className='flex justify-between m-1 my-14 '>
+              <div className='flex justify-between m-1 my-6 '>
                 <button className='bg-blue-600 text-white py-2 px-3 rounded-sm hover:bg-blue-800' onClick={()=>{
                   window.open(project.link)
                 
