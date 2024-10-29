@@ -64,8 +64,9 @@ export const Projects = () => {
 
   return (
     <>
-    <div  id="projects" className="backdrop-blur-sm bg-slate-800/30 text-2xl flex justify-center items-center hover:text-blue-600 flex-col select-none" onClick={()=>{
-      setPopup(true)
+    <div  id="projects" className="backdrop-blur-sm bg-slate-800/30 text-2xl py-5 flex justify-center items-center hover:text-blue-600 flex-col select-none" onClick={()=>{
+      setPopup(true);
+      scrollTo(0, 0);
     }} ><Presentation size={45} />Projects
     
 
@@ -73,7 +74,7 @@ export const Projects = () => {
     {popup && (
         <div
           id="popup"
-          className=" z-10 top-0 left-0 h-full  w-full flex  bg-gray-900/90 backdrop-blur-md  absolute"
+          className="z-10 top-0 left-0   md:flex  md:h-full  md:w-full  bg-gray-900 md:bg-opacity-90 backdrop-blur-md  absolute"
         >
         {/* left div */}
         <div className='h-full w-3/4 grid md:grid-cols-3 md:grid-rows-2 gap-2 ' >
@@ -83,8 +84,8 @@ export const Projects = () => {
             <div className='w-full h-1/2 overflow-hidden' ><img src={project.image} alt="" className='object-fit w-full' /></div>
             <div>
               <div>
-                <h1 className='font-semibold text-xl' >{project.title}</h1>
-                <p className='text-[0.7rem]' >{project.description}</p>
+                <h1 className='font-semibold md:text-xl' >{project.title}</h1>
+                <p className='md:text-[0.7rem] text-[0.4rem]' >{project.description}</p>
               </div>
               <div className='flex justify-between m-1 my-6 '>
                 <button className='bg-blue-600 text-white py-2 px-3 rounded-sm hover:bg-blue-800' onClick={()=>{
@@ -103,11 +104,11 @@ export const Projects = () => {
         }
         </div>
         {/* right div */}
-        <div className='h-full w-1/4' >
+        <div className='h-full md:w-1/4' >
         {
           miniprojects.map((project, index) => (
             <div key={index} className='bg-gray-950/10 rounded-xl flex justify-between m-2 p-2' >
-              <h1 className='font-semibold text-xl' >{project.title}</h1>
+              <h1 className='font-semibold md:text-xl' >{project.title}</h1>
               <button className='bg-blue-600 text-white py-2 px-3 rounded-sm hover:bg-blue-800' onClick={()=>{
                   window.open(project.link)
                 

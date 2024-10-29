@@ -3,9 +3,9 @@ import resume from '../assets/janakshukla_resume.pdf'
 
 export const Contact = () => {
   return (
-    <div id="contact"  className="backdrop-blur-sm bg-slate-800/30 text-2xl    select-none ">
+    <div id="contact"  className="backdrop-blur-sm bg-slate-800/30 text-2xl py-5  select-none ">
 
-      <div className='absolute bottom-3 gap-10 flex right-3' >
+      <div className='md:absolute bottom-3 gap-10 flex right-3' >
       <Github className='hover:text-blue-600 ' 
      
       onClick={() => window.open('https://github.com/janakshukla')}
