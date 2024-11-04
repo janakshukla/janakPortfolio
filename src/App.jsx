@@ -17,6 +17,9 @@ const App = () => {
       stagger: 4,
       rotate: 360,
       delay: 2,
+      onComplete: () => {
+        document.body.style.overflowX = "hidden";
+      }
     });
     gsap.from("#about", {
       duration: 2,
@@ -49,7 +52,7 @@ const App = () => {
   });
 
   return (
-    <div className="bg-gray-900 h-[100dvh] w-[100dvw] text-white flex justify-center items-center overflow-hidden ">
+    <div className="bg-gray-900 h-[100dvh] w-[100dvw] text-white flex justify-center items-center overflow-hidden overflow-x-hidden ">
       {/* a sliding screen for intro */}
       <div
         id="slider"
