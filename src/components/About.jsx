@@ -11,6 +11,8 @@ import github from "../assets/github.svg";
 import mongodb from "../assets/mongodb.svg";
 import express from "../assets/express.svg";
 import nodejs from "../assets/node.svg";
+import prisma from "../assets/prisma.svg";
+import Nextjs from "../assets/nextjs.svg";
 
 export const About = () => {
   const [popup, setpopup] = useState(false);
@@ -71,20 +73,22 @@ export const About = () => {
             <h1 className="uppercase font-serif md:text-5xl text-center font-semibold text-2xl text-white ">
               skills
             </h1>
-            <div className="flex gap-2 ">
-              <img src={html5} alt="html5" className=" size-[4vw]" />
-              <img src={css3} alt="css3" className=" size-[4vw]" />
-              <img src={js} alt="js" className=" size-[4vw]" />
-              <img src={reactjs} alt="reactjs" className=" size-[4vw]" />
-              <img src={tailwind} alt="tailwind" className=" size-[6vw]" />
+            <div className="flex flex-wrap gap-2 ">
+              <img src={Nextjs} alt="Nextjs" className=" size-16" />
+              <img src={prisma} alt="prisma" className=" size-16" />
+              <img src={nodejs} alt="nodejs" className=" size-16" />
+              <img src={reactjs} alt="reactjs" className=" size-16" />
+              <img src={tailwind} alt="tailwind" className=" size-16" />
+              <img src={mongodb} alt="mongodb" className=" size-16" />
               <img
                 src={express}
                 alt="express"
-                className=" brightness-200 size-[6vw]"
+                className=" brightness-200 size-16"
               />
-              <img src={github} alt="github" className=" size-[4vw]" />
-              <img src={mongodb} alt="mongodb" className=" size-[6vw]" />
-              <img src={nodejs} alt="nodejs" className=" size-[6vw]" />
+              <img src={github} alt="github" className=" size-16" />
+              <img src={js} alt="js" className=" size-16" />
+              <img src={css3} alt="css3" className=" size-16" />
+              <img src={html5} alt="html5" className=" size-16" />
             </div>
           </div>
           <X

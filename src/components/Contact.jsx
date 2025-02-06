@@ -1,4 +1,4 @@
-import { Github,Linkedin,FileUser,Instagram } from 'lucide-react' 
+import { Github,Linkedin,FileUser,Instagram,Twitter } from 'lucide-react' 
 import resume from '../assets/janakshukla_resume.pdf'
 
 export const Contact = () => {
@@ -6,6 +6,11 @@ export const Contact = () => {
     <div id="contact"  className="backdrop-blur-sm bg-slate-800/30 text-2xl py-5  select-none ">
 
       <div className='md:absolute bottom-3 gap-10 flex right-3' >
+      <Twitter  className='hover:text-blue-600 font-extrabold ' 
+     
+     onClick={() => window.open('https://x.com/janakshukla2004')}
+     size={45} />
+
       <Github className='hover:text-blue-600 ' 
      
       onClick={() => window.open('https://github.com/janakshukla')}
