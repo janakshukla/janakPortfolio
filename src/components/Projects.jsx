@@ -1,22 +1,15 @@
 import { Presentation } from "lucide-react";
 import { useState } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+
 import janakdadhaba from "../assets/janakdadhaba.png";
 import fundraw from "../assets/fundraw.png";
 import blog from "../assets/blog.png";
 import Etimecapsule from "../assets/Etimecapsule.png";
 import { X } from "lucide-react";
 
-export const Projects = () => {
+ const Projects = () => {
   const [popup, setPopup] = useState(false);
-  useGSAP(() => {
-    gsap.from("#popup", {
-      duration: 0.5,
-      y: -2000,
-      ease: "ease in",
-    });
-  }, [popup]);
+ 
   const projects = [
     {
       title: "E-timecapsule",
@@ -76,18 +69,8 @@ export const Projects = () => {
 
   return (
     <>
-      <div
-        id="projects"
-        className="backdrop-blur-sm bg-slate-800/30 text-2xl py-5 flex justify-center items-center hover:text-blue-600 flex-col select-none"
-        onClick={() => {
-          setPopup(true);
-          scrollTo(0, 0);
-        }}
-      >
-        <Presentation size={45} />
-        Projects
-      </div>
-      {popup && (
+     
+       (
         <div
           id="popup"
           className="z-10 top-0 left-0   md:flex  md:h-full  md:w-full  bg-gray-900 md:bg-opacity-90 backdrop-blur-md  absolute"
@@ -159,11 +142,12 @@ export const Projects = () => {
           <X
             className="absolute right-0 top-0 bg-blue-500"
             onClick={() => {
-              setPopup(false);
+              window.history.back()
             }}
           />
         </div>
-      )}
+      )
     </>
   );
 };
+export default Projects;

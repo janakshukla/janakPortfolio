@@ -3,10 +3,10 @@ import resume from '../assets/janakshukla_resume.pdf'
 
 export const Contact = () => {
   return (
-    <div id="contact"  className="backdrop-blur-sm bg-slate-800/30 text-2xl py-5  select-none ">
+    <div id="contact"  className="backdrop-blur-sm bg-gray-900 text-2xl py-5 flex justify-center items-center select-none ">
 
-      <div className='md:absolute bottom-3 gap-10 flex right-3' >
-      <Twitter  className='hover:text-blue-600 font-extrabold ' 
+      <div className=' md:ml-48 flex gap-8' >
+      <Twitter  className='hover:text-blue-600 font-extrabold' 
      
      onClick={() => window.open('https://x.com/janakshukla2004')}
      size={45} />
