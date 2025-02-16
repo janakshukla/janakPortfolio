@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import image from "../assets/janak2.jpg";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Presentation } from "lucide-react";
 
 import { Github, Linkedin, FileUser, Instagram, Twitter } from "lucide-react";
@@ -9,8 +9,13 @@ import resume from "../assets/janakshukla_resume.pdf";
 import { Footprints } from "lucide-react";
 function Intro() {
   return (
-    <>
-      <motion.div className="h-full  md:flex  justify-between ">
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        className="h-full  md:flex  justify-between select-none "
+      >
         <div className="overflow-hidden md:h-screen lg:w-1/2  ">
           <motion.img
             whileHover={{ scale: 1.1 }}
@@ -23,8 +28,10 @@ function Intro() {
           <div>
             <div>
               <h1 className="text-4xl font-serif text-center leading-loose  font-bold md:mt-4">
-                I am Janak shukla
+                I am <span className="text-violet-600  ">
+               Janak shukla</span>
               </h1>
+               
               <p className="text-center sm:text-lg leading-tight mt-2">
                 I am a full stack developer with the knowledge in
                 Nextjs,MongoDB,Prisma,Expressjs,Reactjs,Nodejs and many more😊.
@@ -42,7 +49,7 @@ function Intro() {
               </Link>
             </div>
             {/* contact */}
-            <div className="mt-8" >
+            <div className="mt-8">
               <div className=" items-center justify-center flex gap-8">
                 <Twitter
                   className="hover:text-blue-600 font-extrabold"
@@ -81,7 +88,7 @@ function Intro() {
           </div>
         </div>
       </motion.div>
-    </>
+    </AnimatePresence>
   );
 }
 

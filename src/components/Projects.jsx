@@ -1,5 +1,4 @@
-import { Presentation } from "lucide-react";
-import { useState } from "react";
+import { motion,AnimatePresence } from "motion/react";
 
 import janakdadhaba from "../assets/janakdadhaba.png";
 import fundraw from "../assets/fundraw.png";
@@ -8,7 +7,7 @@ import Etimecapsule from "../assets/Etimecapsule.png";
 import { X } from "lucide-react";
 
  const Projects = () => {
-  const [popup, setPopup] = useState(false);
+ 
  
   const projects = [
     {
@@ -68,15 +67,17 @@ import { X } from "lucide-react";
   ];
 
   return (
-    <>
+    <AnimatePresence>
      
        (
-        <div
-          id="popup"
-          className="z-10 top-0 left-0   md:flex  md:h-full  md:w-full  bg-gray-900 md:bg-opacity-90 backdrop-blur-md  absolute"
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          className="z-10 top-0 left-0 select-none place-items-center  md:flex text-white  md:h-full  md:w-full  bg-gray-900 md:bg-opacity-90 backdrop-blur-md  absolute"
         >
           {/* left div */}
-          <div className="h-full w-3/4 grid md:grid-cols-3 md:grid-rows-2 gap-2 ">
+          <div className="h-full w-3/4 grid md:grid-cols-3 justify-center md:grid-rows-2 gap-2 ">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -145,9 +146,9 @@ import { X } from "lucide-react";
               window.history.back()
             }}
           />
-        </div>
+        </motion.div>
       )
-    </>
+    </AnimatePresence>
   );
 };
 export default Projects;
