@@ -49,7 +49,7 @@ const About = () => {
             <h5>91%</h5>
           </div>
           {/* skills */}
-          <h1 className="uppercase font-serif md:text-5xl text-center font-semibold text-2xl text-white ">
+          <h1 className="uppercase font-serif  transition-all  md:text-5xl text-center font-semibold text-2xl text-white ">
             skills
           </h1>
           <div className="flex flex-wrap gap-2 ">
@@ -96,7 +96,7 @@ const About = () => {
           </div>
         </div>
         <X
-          className="absolute right-0 top-0 bg-blue-500"
+          className="absolute right-0 top-0 bg-red-500"
           onClick={() => {
             window.history.back();
           }}

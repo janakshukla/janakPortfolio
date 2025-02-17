@@ -42,26 +42,6 @@ function Intro() {
                 I am{" "}
                 <span className="text-violet-600 relative ">
                   Janak shukla
-                  <svg
-                  className="-z-40 absolute  -top-24 -left-2 h-64 w-64 "
-                    
-                    viewBox="0 0 449 280"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <motion.path
-                    initial={{pathLength:0}}
-                    whileInView={{pathLength:1}}
-                    transition={{
-                      duration:1,
-                      delay:1
-                
-                    }}
-                      d="M283.5 264.5C312 277.5 160.5 236 160.5 236C98.2165 212.261 68.8784 193.91 24.4999 154C-8.71092 107.328 -5.63839 82.0621 47.9999 39C89.653 9.37423 122.084 0.557699 204 5.50001C271.855 -0.810618 307.509 5.74865 366 39L445.5 90C447.266 125.897 444.928 147.524 434.567 172C431.806 178.523 428.475 185.248 424.5 192.5C384.589 209.93 360.427 216.907 312 221L160.5 277.5"
-                      stroke="#A78BFA"
-                      stroke-width="5"
-                    />
-                  </svg>
                 </span>
               </h1>
 

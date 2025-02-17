@@ -4,7 +4,7 @@ import janakdadhaba from "../assets/janakdadhaba.png";
 import fundraw from "../assets/fundraw.png";
 import blog from "../assets/blog.png";
 import Etimecapsule from "../assets/Etimecapsule.png";
-import { X } from "lucide-react";
+import { X,Share,Code2Icon } from "lucide-react";
 
  const Projects = () => {
  
@@ -101,20 +101,20 @@ import { X } from "lucide-react";
                   </div>
                   <div className="flex justify-between m-1 my-6 ">
                     <button
-                      className="bg-blue-600 text-white py-2 px-3 rounded-sm hover:bg-blue-800"
+                      className="text-white py-2 px-3 rounded-sm hover:text-blue-800"
                       onClick={() => {
                         window.open(project.link);
                       }}
                     >
-                      code
+                      <Code2Icon/>
                     </button>
                     <button
-                      className="bg-blue-600 text-white py-2 px-3 rounded-sm hover:bg-blue-800"
+                      className=" text-white py-2 px-3 rounded-sm hover:text-blue-800"
                       onClick={() => {
                         window.open(project.codelink);
                       }}
                     >
-                      live
+                      <Share />
                     </button>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ import { X } from "lucide-react";
             ))}
           </div>
           <X
-            className="absolute right-0 top-0 bg-blue-500"
+            className="absolute right-0 top-0 bg-red-500"
             onClick={() => {
               window.history.back()
             }}
