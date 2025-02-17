@@ -7,7 +7,18 @@ import { Github, Linkedin, FileUser, Instagram, Twitter } from "lucide-react";
 import resume from "../assets/janakshukla_resume.pdf";
 
 import { Footprints } from "lucide-react";
+import FrontAnimation from "./FrontAnimation";
+import { useEffect, useState } from "react";
 function Intro() {
+  const [visible, setvisible] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setvisible(false);
+    }, 2000);
+  }, []);
+  if (visible) {
+    return (<FrontAnimation />);
+  }
   return (
     <AnimatePresence>
       <motion.div
@@ -28,10 +39,9 @@ function Intro() {
           <div>
             <div>
               <h1 className="text-4xl font-serif text-center leading-loose  font-bold md:mt-4">
-                I am <span className="text-violet-600  ">
-               Janak shukla</span>
+                I am <span className="text-violet-600  ">Janak shukla</span>
               </h1>
-               
+
               <p className="text-center sm:text-lg leading-tight mt-2">
                 I am a full stack developer with the knowledge in
                 Nextjs,MongoDB,Prisma,Expressjs,Reactjs,Nodejs and many more😊.
