@@ -45,11 +45,15 @@ import { X,Share,Code2Icon } from "lucide-react";
   ];
   const miniprojects = [
     {
+      title: "Authentication from scratch",
+      link: "https://github.com/janakshukla/authentication_from_scratch",
+    },
+    {
       title: "videostreaming webapp",
       link: "https://github.com/janakshukla/VIDEO_STREAMING",
     },
     {
-      title: "password genrator",
+      title: "password generator",
       link: "https://github.com/janakshukla/password-genartor",
     },
     {
@@ -130,13 +134,13 @@ import { X,Share,Code2Icon } from "lucide-react";
               >
                 <h1 className="font-semibold md:text-xl">{project.title}</h1>
                 <button
-                  className="bg-blue-600 text-white py-2 px-3 rounded-sm hover:bg-blue-800"
-                  onClick={() => {
-                    window.open(project.link);
-                  }}
-                >
-                  code
-                </button>
+                      className="text-white py-2 px-3 rounded-sm hover:text-blue-800"
+                      onClick={() => {
+                        window.open(project.link);
+                      }}
+                    >
+                      <Code2Icon/>
+                    </button>
               </div>
             ))}
           </div>

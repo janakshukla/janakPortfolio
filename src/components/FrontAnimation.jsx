@@ -1,72 +1,311 @@
 import React from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
+
 const FrontAnimation = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 5 }}
-        className="w-[85dvw] h-[85dvh]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="w-screen h-screen flex flex-col items-center justify-center"
       >
-        <svg
-          className="h-full w-full"
-          width="34"
-          height="34"
-          viewBox="0 0 34 34"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ 
+            type: "spring", 
+            stiffness: 100, 
+            damping: 15,
+            delay: 0.2
+          }}
+          className="relative w-64 h-64 mb-8"
         >
-          <g opacity="0.9" clipPath="url(#clip0_4_76)">
+          {/* Main circle */}
+          <motion.div className="absolute inset-0">
+            <svg 
+              viewBox="0 0 200 200" 
+              className="w-full h-full"
+            >
+              <motion.circle
+                cx="100"
+                cy="100"
+                r="80"
+                fill="none"
+                stroke="#3B82F6"
+                strokeWidth="4"
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ pathLength: 1, opacity: 1 }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+              />
+            </svg>
+          </motion.div>
+
+          {/* Portfolio elements */}
+          <motion.div 
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <svg 
+              viewBox="0 0 200 200" 
+              className="w-full h-full"
+            >
+              {/* Code bracket left */}
+              <motion.path
+                d="M70 60 L50 100 L70 140"
+                stroke="#F43F5E"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
+              />
+              
+              {/* Code bracket right */}
+              <motion.path
+                d="M130 60 L150 100 L130 140"
+                stroke="#F43F5E"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                fill="none"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 1.2 }}
+              />
+              
+              {/* Design element - pencil */}
+              <motion.path
+                d="M100 70 L100 130"
+                stroke="#3B82F6"
+                strokeWidth="4"
+                strokeLinecap="round"
+                fill="none"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 1.8 }}
+              />
+              
+              {/* Creative dots */}
+              <motion.circle
+                cx="85"
+                cy="100"
+                r="5"
+                fill="#10B981"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 2.2, duration: 0.3 }}
+              />
+              <motion.circle
+                cx="100"
+                cy="100"
+                r="5"
+                fill="#F59E0B"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 2.4, duration: 0.3 }}
+              />
+              <motion.circle
+                cx="115"
+                cy="100"
+                r="5"
+                fill="#8B5CF6"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 2.6, duration: 0.3 }}
+              />
+            </svg>
+          </motion.div>
+
+          {/* Rotating outer ring */}
+          <motion.div 
+            className="absolute inset-0"
+            initial={{ rotate: 0 }}
+            animate={{ rotate: 360 }}
+            transition={{ 
+              duration: 20, 
+              ease: "linear", 
+              repeat: Infinity,
+              repeatType: "loop" 
+            }}
+          >
+            <svg 
+              viewBox="0 0 200 200" 
+              className="w-full h-full"
+            >
+              <motion.path
+                d="M100 20 A80 80 0 0 1 100 180 A80 80 0 0 1 100 20"
+                stroke="#6366F1"
+                strokeWidth="2"
+                strokeDasharray="5,10"
+                fill="none"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.6 }}
+                transition={{ delay: 2.8, duration: 0.8 }}
+              />
+            </svg>
+          </motion.div>
+        </motion.div>
+
+        {/* Portfolio text */}
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 2.2, duration: 0.8 }}
+          className="relative"
+        >
+          <svg 
+            width="280" 
+            height="60" 
+            viewBox="0 0 280 60" 
+            className="w-full h-full"
+          >
             <motion.path
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1, ease: "linear" }}
-              d="M17 31.1667C24.824 31.1667 31.1667 24.824 31.1667 17C31.1667 9.17597 24.824 2.83334 17 2.83334C9.17596 2.83334 2.83333 9.17597 2.83333 17C2.83333 24.824 9.17596 31.1667 17 31.1667Z"
-              stroke="#ffff"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <motion.path
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1, ease: "linear" }}
-              d="M23.0067 10.9933L20.0033 20.0033L10.9933 23.0067L13.9967 13.9967L23.0067 10.9933Z"
-              stroke="#ffff"
+              d="M30 15 L30 40 M25 15 L40 15 M30 25 L38 25"
+              stroke="#3B82F6"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2.4 }}
             />
-          </g>
-          <defs>
-            <clipPath id="clip0_4_76">
-              <motion.rect
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                width="34"
-                height="34"
-                fill="white"
-              />
-            </clipPath>
-          </defs>
-        </svg>
-        <motion.svg
-          className="size-48 "
-          viewBox="0 0 51 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+            <motion.path
+              d="M50 15 C50 15, 45 15, 45 25 C45 35, 50 35, 55 35 C60 35, 65 35, 65 25 C65 15, 60 15, 55 15"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2.6 }}
+            />
+            <motion.path
+              d="M75 15 L75 40 M75 15 L85 25 L95 15 M95 15 L95 40"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 2.8 }}
+            />
+            <motion.path
+              d="M105 15 L105 40 M105 15 L120 15 M105 27 L115 27"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 3.0 }}
+            />
+            <motion.path
+              d="M130 15 C130 15, 125 15, 125 25 C125 35, 130 35, 135 35 C140 35, 145 35, 145 25 C145 15, 140 15, 135 15"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 3.2 }}
+            />
+            <motion.path
+              d="M155 15 L155 40 M155 15 L170 15"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 3.4 }}
+            />
+            <motion.path
+              d="M180 15 C180 15, 175 15, 175 25 C175 35, 180 35, 185 35 C190 35, 195 35, 195 25 C195 15, 190 15, 185 15"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 3.6 }}
+            />
+            <motion.path
+              d="M205 15 L205 40 M205 15 L220 15"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 3.8 }}
+            />
+            <motion.path
+              d="M230 15 C230 15, 225 15, 225 25 C225 35, 230 35, 235 35 C240 35, 245 35, 245 25 C245 15, 240 15, 235 15"
+              stroke="#3B82F6"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 1, ease: "easeInOut", delay: 4.0 }}
+            />
+          </svg>
+        </motion.div>
+
+        {/* Skills tags */}
+        <motion.div 
+          className="flex flex-wrap justify-center gap-2 mt-8 max-w-md"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 4.5, duration: 1 }}
         >
-          <motion.path
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            d="M2.40341 9L0.409091 2.45455H1.46591L2.88068 7.46591H2.94886L4.34659 2.45455H5.42045L6.80114 7.44886H6.86932L8.28409 2.45455H9.34091L7.34659 9H6.35795L4.92614 3.97159H4.82386L3.39205 9H2.40341ZM13.1921 9.13636C12.5614 9.13636 12.0174 8.99716 11.56 8.71875C11.1055 8.4375 10.7546 8.04545 10.5075 7.54261C10.2631 7.03693 10.141 6.44886 10.141 5.77841C10.141 5.10795 10.2631 4.51705 10.5075 4.00568C10.7546 3.49148 11.0984 3.09091 11.5387 2.80398C11.9819 2.5142 12.4989 2.36932 13.0898 2.36932C13.4308 2.36932 13.7674 2.42614 14.0998 2.53977C14.4322 2.65341 14.7347 2.83807 15.0075 3.09375C15.2802 3.34659 15.4975 3.68182 15.6594 4.09943C15.8214 4.51705 15.9023 5.03125 15.9023 5.64205V6.06818H10.8569V5.19886H14.8796C14.8796 4.82955 14.8058 4.5 14.658 4.21023C14.5131 3.92045 14.3058 3.69176 14.0359 3.52415C13.7688 3.35653 13.4535 3.27273 13.0898 3.27273C12.6893 3.27273 12.3427 3.37216 12.0501 3.57102C11.7603 3.76705 11.5373 4.02273 11.381 4.33807C11.2248 4.65341 11.1467 4.99148 11.1467 5.35227V5.93182C11.1467 6.42614 11.2319 6.84517 11.4023 7.18892C11.5756 7.52983 11.8157 7.78977 12.1225 7.96875C12.4293 8.14489 12.7859 8.23295 13.1921 8.23295C13.4563 8.23295 13.695 8.19602 13.908 8.12216C14.1239 8.04545 14.31 7.93182 14.4663 7.78125C14.6225 7.62784 14.7433 7.4375 14.8285 7.21023L15.8001 7.48295C15.6978 7.8125 15.5259 8.10227 15.2844 8.35227C15.043 8.59943 14.7447 8.79261 14.3896 8.93182C14.0344 9.06818 13.6353 9.13636 13.1921 9.13636ZM18.4379 0.272727V9H17.4322V0.272727H18.4379ZM22.9389 9.13636C22.3253 9.13636 21.7969 8.99148 21.3537 8.7017C20.9105 8.41193 20.5696 8.01278 20.331 7.50426C20.0923 6.99574 19.973 6.41477 19.973 5.76136C19.973 5.09659 20.0952 4.50994 20.3395 4.00142C20.5866 3.49006 20.9304 3.09091 21.3707 2.80398C21.8139 2.5142 22.331 2.36932 22.9219 2.36932C23.3821 2.36932 23.7969 2.45455 24.1662 2.625C24.5355 2.79545 24.8381 3.03409 25.0739 3.34091C25.3097 3.64773 25.456 4.00568 25.5128 4.41477H24.5071C24.4304 4.11648 24.2599 3.85227 23.9957 3.62216C23.7344 3.3892 23.3821 3.27273 22.9389 3.27273C22.5469 3.27273 22.2031 3.375 21.9077 3.57955C21.6151 3.78125 21.3864 4.06676 21.2216 4.43608C21.0597 4.80256 20.9787 5.23295 20.9787 5.72727C20.9787 6.23295 21.0582 6.6733 21.2173 7.0483C21.3793 7.4233 21.6065 7.71449 21.8991 7.92188C22.1946 8.12926 22.5412 8.23295 22.9389 8.23295C23.2003 8.23295 23.4375 8.1875 23.6506 8.09659C23.8636 8.00568 24.044 7.875 24.1918 7.70455C24.3395 7.53409 24.4446 7.32955 24.5071 7.09091H25.5128C25.456 7.47727 25.3153 7.82528 25.0909 8.13494C24.8693 8.44176 24.5753 8.68608 24.2088 8.8679C23.8452 9.04688 23.4219 9.13636 22.9389 9.13636ZM29.642 9.13636C29.0511 9.13636 28.5327 8.99574 28.0866 8.71449C27.6435 8.43324 27.2969 8.03977 27.0469 7.53409C26.7997 7.02841 26.6761 6.4375 26.6761 5.76136C26.6761 5.07955 26.7997 4.48437 27.0469 3.97585C27.2969 3.46733 27.6435 3.07244 28.0866 2.79119C28.5327 2.50994 29.0511 2.36932 29.642 2.36932C30.233 2.36932 30.75 2.50994 31.1932 2.79119C31.6392 3.07244 31.9858 3.46733 32.233 3.97585C32.483 4.48437 32.608 5.07955 32.608 5.76136C32.608 6.4375 32.483 7.02841 32.233 7.53409C31.9858 8.03977 31.6392 8.43324 31.1932 8.71449C30.75 8.99574 30.233 9.13636 29.642 9.13636ZM29.642 8.23295C30.0909 8.23295 30.4602 8.1179 30.75 7.88778C31.0398 7.65767 31.2543 7.35511 31.3935 6.98011C31.5327 6.60511 31.6023 6.19886 31.6023 5.76136C31.6023 5.32386 31.5327 4.91619 31.3935 4.53835C31.2543 4.16051 31.0398 3.85511 30.75 3.62216C30.4602 3.3892 30.0909 3.27273 29.642 3.27273C29.1932 3.27273 28.8239 3.3892 28.5341 3.62216C28.2443 3.85511 28.0298 4.16051 27.8906 4.53835C27.7514 4.91619 27.6818 5.32386 27.6818 5.76136C27.6818 6.19886 27.7514 6.60511 27.8906 6.98011C28.0298 7.35511 28.2443 7.65767 28.5341 7.88778C28.8239 8.1179 29.1932 8.23295 29.642 8.23295ZM34.1431 9V2.45455H35.1147V3.47727H35.1999C35.3363 3.12784 35.5565 2.85653 35.8604 2.66335C36.1644 2.46733 36.5295 2.36932 36.9556 2.36932C37.3874 2.36932 37.7468 2.46733 38.0337 2.66335C38.3235 2.85653 38.5494 3.12784 38.7113 3.47727H38.7795C38.9471 3.1392 39.1985 2.87074 39.5337 2.67188C39.869 2.47017 40.271 2.36932 40.7397 2.36932C41.3249 2.36932 41.8036 2.55256 42.1758 2.91903C42.5479 3.28267 42.734 3.84943 42.734 4.61932V9H41.7283V4.61932C41.7283 4.13636 41.5962 3.79119 41.332 3.58381C41.0678 3.37642 40.7567 3.27273 40.3988 3.27273C39.9386 3.27273 39.582 3.41193 39.3292 3.69034C39.0763 3.96591 38.9499 4.31534 38.9499 4.73864V9H37.9272V4.51705C37.9272 4.14489 37.8065 3.84517 37.565 3.6179C37.3235 3.38778 37.0124 3.27273 36.6317 3.27273C36.3704 3.27273 36.1261 3.34233 35.8988 3.48153C35.6744 3.62074 35.4925 3.81392 35.3533 4.06108C35.217 4.3054 35.1488 4.58807 35.1488 4.90909V9H34.1431ZM47.3171 9.13636C46.6864 9.13636 46.1424 8.99716 45.685 8.71875C45.2305 8.4375 44.8796 8.04545 44.6325 7.54261C44.3881 7.03693 44.266 6.44886 44.266 5.77841C44.266 5.10795 44.3881 4.51705 44.6325 4.00568C44.8796 3.49148 45.2234 3.09091 45.6637 2.80398C46.1069 2.5142 46.6239 2.36932 47.2148 2.36932C47.5558 2.36932 47.8924 2.42614 48.2248 2.53977C48.5572 2.65341 48.8597 2.83807 49.1325 3.09375C49.4052 3.34659 49.6225 3.68182 49.7844 4.09943C49.9464 4.51705 50.0273 5.03125 50.0273 5.64205V6.06818H44.9819V5.19886H49.0046C49.0046 4.82955 48.9308 4.5 48.783 4.21023C48.6381 3.92045 48.4308 3.69176 48.1609 3.52415C47.8938 3.35653 47.5785 3.27273 47.2148 3.27273C46.8143 3.27273 46.4677 3.37216 46.1751 3.57102C45.8853 3.76705 45.6623 4.02273 45.506 4.33807C45.3498 4.65341 45.2717 4.99148 45.2717 5.35227V5.93182C45.2717 6.42614 45.3569 6.84517 45.5273 7.18892C45.7006 7.52983 45.9407 7.78977 46.2475 7.96875C46.5543 8.14489 46.9109 8.23295 47.3171 8.23295C47.5813 8.23295 47.82 8.19602 48.033 8.12216C48.2489 8.04545 48.435 7.93182 48.5913 7.78125C48.7475 7.62784 48.8683 7.4375 48.9535 7.21023L49.9251 7.48295C49.8228 7.8125 49.6509 8.10227 49.4094 8.35227C49.168 8.59943 48.8697 8.79261 48.5146 8.93182C48.1594 9.06818 47.7603 9.13636 47.3171 9.13636Z"
-            stroke={"skyblue"}
-            strokeWidth="1"
-          />
-        </motion.svg>
+          <motion.span 
+            className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 4.6, type: "spring", stiffness: 200 }}
+          >
+            Developer
+          </motion.span>
+          <motion.span 
+            className="px-3 py-1 bg-pink-500/20 text-pink-400 rounded-full text-sm"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 4.7, type: "spring", stiffness: 200 }}
+          >
+            Designer
+          </motion.span>
+          <motion.span 
+            className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 4.8, type: "spring", stiffness: 200 }}
+          >
+            Creator
+          </motion.span>
+          <motion.span 
+            className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 4.9, type: "spring", stiffness: 200 }}
+          >
+            Problem Solver
+          </motion.span>
+        </motion.div>
       </motion.div>
     </AnimatePresence>
   );
