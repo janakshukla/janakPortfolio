@@ -41,7 +41,7 @@ function Intro() {
               <h1 className="text-4xl font-serif text-center leading-loose font-bold md:mt-4">
                 I am{" "}
                 <span className="text-violet-600 relative">
-                  John Doe
+                  Janak Shukla
                 </span>
               </h1>
 

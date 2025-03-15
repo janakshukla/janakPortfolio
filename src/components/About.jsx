@@ -34,7 +34,7 @@ const About = () => {
               </span>
             </h1>
             <h2>Jawaharlal Nehru College Of Technology Rewa</h2>
-            <h5>CGPA: 7.39/10</h5>
+            <h5>CGPA: 7.6/10</h5>
             <h1 className="md:text-2xl  text-wrap md:mt-5">
               Senior Secondary (XII), Board Of Secondary Education Bhopal
               <span className="absolute hidden md:block right-0">2022</span>
