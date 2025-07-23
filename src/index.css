@@ -2,7 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  scrollbar-width: 0px;
-    -ms-overflow-style: none;
-}
