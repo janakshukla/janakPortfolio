@@ -3,7 +3,7 @@ import { div } from "motion/react-client";
 export default function Container({ children }) {
 
     return (
-        <div className="  min-h-[80svh] w-[50dvw] ">
+        <div className="  min-h-[80svh] w-[90dvw] md:w-[50dvw] ">
             {children}
         </div>
     )
