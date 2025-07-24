@@ -43,7 +43,7 @@ const Hero = () => {
           {" "}
           20,Rewa | Fullstack Engineer{" "}
         </p>
-        <p className=" mt-3 text-gray-400 leading-snug " >
+        <p className=" mt-3 text-gray-400 leading-snug ">
           I’m Janak Shukla, currently pursuing Computer Science Engineering and
           learning by building. I’ve developed hands-on experience with React,
           Prisma, and MongoDB through personal and academic projects. I’m eager
