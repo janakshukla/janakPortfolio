@@ -37,7 +37,7 @@ const Hero = () => {
       </div>
       <div className="mt-12">
         <h1 className="text-3xl md:text-4xl text-white font-semibold tracking-tighter ">
-          Hi,I'm Janak shukla
+          Hi, I'm Janak shukla
         </h1>
         <p className="text-xl mt-3 md:text-2xl text-gray-400 tracking-tighter ">
           {" "}
