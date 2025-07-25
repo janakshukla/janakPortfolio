@@ -41,7 +41,7 @@ const Hero = () => {
         </h1>
         <p className="text-xl mt-3 md:text-2xl text-gray-400 tracking-tighter ">
           {" "}
-          20,Rewa | Fullstack Engineer{" "}
+          20, Rewa | Fullstack Engineer{" "}
         </p>
         <p className=" mt-3 text-gray-400 leading-snug ">
           I’m Janak Shukla, currently pursuing Computer Science Engineering and
