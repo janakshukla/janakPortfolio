@@ -1,9 +1,11 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
 import img from "../assets/image.png";
 
+
 const Hero = () => {
   return (
-    <div>
+    <div
+    >
       <div className="flex justify-between">
         <img
           className="size-40 rounded-3xl object-cover shadow-2xl shadow-[#00000040] border-2 border-[#ffffff20] hover:scale-105 transition-all duration-500 ease-in-out"
