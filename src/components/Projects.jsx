@@ -1,4 +1,4 @@
-import { Code2Icon, Share } from "lucide-react";
+import { motion } from "motion/react";
 
 export const Projects = () => {
   const projects = [
@@ -39,7 +39,13 @@ export const Projects = () => {
       <div className="flex flex-wrap text-white gap-6">
         {projects.map((project, index) => {
           return (
-            <div
+            <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.4,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
             key={index}
             className="group relative w-full lg:w-[calc(50%-12px)] bg-white/10 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:bg-white/20 hover:border-gray-600 transition-all duration-300 cursor-pointer"
           >
@@ -69,7 +75,7 @@ export const Projects = () => {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
           );
         })}
       </div>
