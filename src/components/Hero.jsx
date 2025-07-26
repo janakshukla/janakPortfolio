@@ -17,21 +17,21 @@ const Hero = () => {
             className="hover:bg-slate-600 p-2 rounded-2xl h-fit"
             href="https://github.com/janakshukla/"
           >
-            <Github className="size-6   text-white " />
+            <Github className="size-6  hover:scale-110 hover:rotate-6  text-white " />
           </a>
           <a
             target="_blank"
             className="hover:bg-slate-600 p-2 rounded-2xl h-fit"
             href="https://x.com/janakshukla2004/"
           >
-            <Twitter className="size-6  text-white " />
+            <Twitter className="size-6  hover:scale-110 hover:rotate-6 text-white " />
           </a>
           <a
             target="_blank"
             className="hover:bg-slate-600 p-2 rounded-2xl h-fit"
             href="https://www.linkedin.com/in/janak-shukla-b25808257/"
           >
-            <Linkedin className="size-6  text-white " />
+            <Linkedin className="size-6 hover:scale-110 hover:rotate-6  text-white " />
           </a>
         </div>
       </div>
