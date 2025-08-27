@@ -8,8 +8,13 @@ export const Projects = () => {
         "A time capsule web app where you can write your thoughts and save it for future use uses Nextjs,tailwind css,prisma,mongoDB,Resend and vercel for deployment",
       codelink: "https://github.com/janakshukla/e-timecapsule",
       link: "https://janak2004.tech",
-    },
-    {
+    },{
+      title: "Dayui",
+      description:
+        "A ui library which contain multiple well designed section and public code.",
+      codelink: "https://github.com/janakshukla/Dayui",
+      link: "https://dayui.dpdns.org/",
+    },{
       title: "multi-user drawing web",
       description:
         "A multiuser supported drawing app where you can share the link and draw with your friends uses reactjs and websocket for real time data sharing",
