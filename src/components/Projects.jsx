@@ -9,7 +9,7 @@ export const Projects = () => {
       codelink: "https://github.com/janakshukla/e-timecapsule",
       link: "https://janak2004.tech",
     },{
-      title: "Dayui",
+      title: "Dayui(still building)",
       description:
         "A ui library which contain multiple well designed section and public code.",
       codelink: "https://github.com/janakshukla/Dayui",
