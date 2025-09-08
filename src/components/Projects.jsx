@@ -46,7 +46,7 @@ export const Projects = () => {
           return (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 } }
               transition={{
                 duration: 0.2,
                 scale: { type: "spring", visualDuration: 0.1, bounce: 0.1 },

@@ -16,7 +16,7 @@ const App = () => {
           style={{
             background: "linear-gradient(180deg, #ffffff 0%, #00ff88 50%, #0088ff 100%)",
             scaleY: scrollYProgress,
-            width: 1,
+            width: 2,
             height: "100vh",
             left: 0,
             bottom: 0,
