@@ -5,33 +5,33 @@ export const Projects = () => {
     {
       title: "E-timecapsule",
       description:
-        "A time capsule web app where you can write your thoughts and save it for future use uses Nextjs,tailwind css,prisma,mongoDB,Resend and vercel for deployment",
+        "A time capsule web application where you can write your thoughts and save them for future viewing. Built with Next.js, Tailwind CSS, Prisma, MongoDB, Resend for email notifications, and deployed on Vercel.",
       codelink: "https://github.com/janakshukla/e-timecapsule",
       link: "https://janak2004.tech",
     },{
-      title: "Dayui(still building)",
+      title: "Dayui",
       description:
-        "A ui library which contain multiple well designed section and public code.",
+        "A UI inspiration library featuring multiple well-designed sections with public code examples. Continuously expanding with new sections and features, built using React.js and Tailwind CSS.",
       codelink: "https://github.com/janakshukla/Dayui",
-      link: "https://dayui.dpdns.org/",
+      link: "https://dayui-sigma.vercel.app/",
     },{
-      title: "multi-user drawing web",
+      title: "Multi-user Drawing Web",
       description:
-        "A multiuser supported drawing app where you can share the link and draw with your friends uses reactjs and websocket for real time data sharing",
+        "A collaborative drawing application supporting multiple users in real-time. Share the link with friends and draw together, built with React.js and WebSocket for seamless real-time data sharing.",
       codelink: "https://github.com/janakshukla/drawingapp",
       link: "https://drawingapp-ten.vercel.app/",
     },
     {
-      title: "Airesumereviewer",
+      title: "AI Resume Reviewer",
       description:
-        "It is ai(Gemini) powered resume reviver where you can see what's the ats of your resume and where its need to be improved.",
+        "An AI-powered resume reviewer using Google Gemini API. Analyze your resume's ATS score and receive detailed feedback on areas for improvement to enhance your job application success.",
       codelink: "https://github.com/janakshukla/airesumereviewer",
       link: "https://resumereview.janak2004.tech/",
     },
     {
-      title: "Blog app",
+      title: "Blog App",
       description:
-        "A blog app(more liking a twitter clone) made with react js &tailwind css in front end and used appwrite cloud services forbackend and database",
+        "A social blogging platform similar to Twitter, featuring user authentication, post creation, and social interactions. Built with React.js and Tailwind CSS frontend, powered by Appwrite cloud services for backend and database.",
       codelink: "https://github.com/janakshukla/blog-app",
       link: "https://blog-app-khaki-three.vercel.app/",
     },
