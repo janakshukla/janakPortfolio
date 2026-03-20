@@ -46,10 +46,10 @@ const Hero = () => {
           20, Rewa | Fullstack Engineer{" "}
         </p>
         <p className=" mt-3 text-gray-400 leading-snug ">
-          I’m Janak Shukla, currently pursuing Computer Science Engineering and
-          learning by building. I’ve developed hands-on experience with React,
-          Prisma, and MongoDB through personal and academic projects. I’m eager
-          to grow as a developer and contribute to impactful teams and products.
+          I’m Janak Shukla, currently working as SD1 at WeframeTech and
+          pursuing Computer Science Engineering. I build full-stack web
+          applications with React, Next.js, Node.js, and MongoDB, and love
+          turning ideas into fast, polished products.
         </p>
       </div>
     </div>

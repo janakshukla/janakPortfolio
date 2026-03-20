@@ -2,6 +2,7 @@ import React from "react";
 import Container from "./components/Container";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 import { Projects } from "./components/Projects";
 import Footer from "./components/Footer";
 import { motion, useScroll } from "motion/react";
@@ -29,6 +30,7 @@ const App = () => {
         <Container>
           <Hero />
           <Skills />
+          <Experience />
           <Projects />
           <Footer />
         </Container>
