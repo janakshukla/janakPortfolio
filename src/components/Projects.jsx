@@ -36,24 +36,52 @@ export const Projects = () => {
       link: "https://blog-app-khaki-three.vercel.app/",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.12,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 28, scale: 0.96 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.45,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <div className="lg:mt-12 mt-4 ">
       <h1 className=" text-2xl font-medium mb-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
         Projects
       </h1>
-      <div className="flex flex-wrap text-white gap-6">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.18 }}
+        className="flex flex-wrap text-white gap-6"
+      >
         {projects.map((project, index) => {
           return (
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 } }
-              transition={{
-                duration: 0.2,
-                scale: { type: "spring", visualDuration: 0.1, bounce: 0.1 },
-              }}
+              variants={cardVariants}
+              whileHover={{ y: -6, scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
               key={index}
-              className="group relative w-full lg:w-[calc(50%-12px)] bg-white/10 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:bg-gradient-to-r from-cyan-600/20 via-blue-600/20 to-indigo-600/20 hover:border-gray-600 transition-all duration-300 cursor-pointer"
+              className="group relative overflow-hidden w-full lg:w-[calc(50%-12px)] bg-white/10 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-blue-400/60 transition-all duration-300"
             >
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-indigo-500/10" />
               <div className="flex flex-col h-full">
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {project.title}
@@ -63,27 +91,31 @@ export const Projects = () => {
                 </p>
                 <div className="flex gap-3 mt-auto">
                   {project.link && (
-                    <button
-                      onClick={() => window.open(project.link, "_blank")}
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
                       className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors"
                     >
                       Live Demo
-                    </button>
+                    </a>
                   )}
                   {project.codelink && (
-                    <button
-                      onClick={() => window.open(project.codelink, "_blank")}
+                    <a
+                      href={project.codelink}
+                      target="_blank"
+                      rel="noreferrer"
                       className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md text-sm font-medium transition-colors"
                     >
                       View Code
-                    </button>
+                    </a>
                   )}
                 </div>
               </div>
             </motion.div>
           );
         })}
-      </div>
+      </motion.div>
     </div>
   );
 };
