@@ -7,7 +7,7 @@ export const Projects = () => {
       description:
         "A time capsule web application where you can write your thoughts and save them for future viewing. Built with Next.js, Tailwind CSS, Prisma, MongoDB, Resend for email notifications, and deployed on Vercel.",
       codelink: "https://github.com/janakshukla/e-timecapsule",
-      link: "https://janak2004.tech",
+      link: "https://e-timecapsule-vtd7-tau.vercel.app/",
     },{
       title: "Dayui",
       description:
@@ -26,7 +26,7 @@ export const Projects = () => {
       description:
         "An AI-powered resume reviewer using Google Gemini API. Analyze your resume's ATS score and receive detailed feedback on areas for improvement to enhance your job application success.",
       codelink: "https://github.com/janakshukla/airesumereviewer",
-      link: "https://resumereview.janak2004.tech/",
+      link: "https://airesumereviewer.vercel.app/",
     },
     {
       title: "Blog App",
