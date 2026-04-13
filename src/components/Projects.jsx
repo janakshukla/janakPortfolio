@@ -61,10 +61,10 @@ export const Projects = () => {
   };
 
   return (
-    <div className="lg:mt-12 mt-4 ">
-      <h1 className=" text-2xl font-medium mb-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
+    <section id="projects" className="lg:mt-12 mt-4 " aria-labelledby="projects-heading">
+      <h2 id="projects-heading" className=" text-2xl font-medium mb-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
         Projects
-      </h1>
+      </h2>
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -116,6 +116,6 @@ export const Projects = () => {
           );
         })}
       </motion.div>
-    </div>
+    </section>
   );
 };

@@ -22,10 +22,10 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="lg:mt-12 mt-4">
-      <h1 className="text-2xl font-medium mb-5 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
+    <section id="experience" className="lg:mt-12 mt-4" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" className="text-2xl font-medium mb-5 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
         Experience
-      </h1>
+      </h2>
       <div className="flex flex-col gap-4">
         {experiences.map((exp, index) => (
           <motion.div
@@ -62,7 +62,7 @@ const Experience = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -28,10 +28,14 @@ const App = () => {
           }}
         />
         <Container>
-          <Hero />
-          <Skills />
-          <Experience />
-          <Projects />
+          <header>
+            <Hero />
+          </header>
+          <main>
+            <Skills />
+            <Experience />
+            <Projects />
+          </main>
           <Footer />
         </Container>
       </div>

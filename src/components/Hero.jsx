@@ -4,20 +4,25 @@ import img from "../assets/image.png";
 
 const Hero = () => {
   return (
-    <div
-    >
+    <section aria-label="Introduction">
       <div className="flex justify-between">
         <img
           className="size-40 rounded-3xl object-cover shadow-2xl shadow-[#00000040] border-2 border-[#ffffff20] hover:scale-105 transition-all duration-500 ease-in-out"
           src={img}
-          alt="this is hero image"
+          alt="Portrait of Janak Shukla"
+          loading="eager"
+          fetchPriority="high"
+          width="160"
+          height="160"
         />
         {/* contact section */}
-        <div className="flex justify-end gap-2 md:gap-6 ">
+        <nav className="flex justify-end gap-2 md:gap-6 " aria-label="Social profiles">
           <a
             target="_blank"
             className="hover:bg-slate-600 p-2 rounded-2xl h-fit"
             href="https://github.com/janakshukla/"
+            rel="noopener noreferrer"
+            aria-label="Visit Janak Shukla GitHub profile"
           >
             <Github className="size-6  hover:scale-110 hover:rotate-6  text-white " />
           </a>
@@ -25,6 +30,8 @@ const Hero = () => {
             target="_blank"
             className="hover:bg-slate-600 p-2 rounded-2xl h-fit"
             href="https://x.com/janakshukla2004/"
+            rel="noopener noreferrer"
+            aria-label="Visit Janak Shukla X profile"
           >
             <Twitter className="size-6  hover:scale-110 hover:rotate-6 text-white " />
           </a>
@@ -32,14 +39,16 @@ const Hero = () => {
             target="_blank"
             className="hover:bg-slate-600 p-2 rounded-2xl h-fit"
             href="https://www.linkedin.com/in/janak-shukla-b25808257/"
+            rel="noopener noreferrer"
+            aria-label="Visit Janak Shukla LinkedIn profile"
           >
             <Linkedin className="size-6 hover:scale-110 hover:rotate-6  text-white " />
           </a>
-        </div>
+        </nav>
       </div>
       <div className="mt-12">
         <h1 className="text-3xl md:text-4xl text-white font-semibold tracking-tighter ">
-          Hi, I'm Janak shukla
+          Janak Shukla | Full-Stack Engineer
         </h1>
         <p className="text-xl mt-3 md:text-2xl text-gray-400 tracking-tighter ">
           {" "}
@@ -52,7 +61,7 @@ const Hero = () => {
           turning ideas into fast, polished products.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
