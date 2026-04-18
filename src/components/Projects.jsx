@@ -63,7 +63,7 @@ export const Projects = () => {
   return (
     <section id="projects" className="lg:mt-12 mt-4 " aria-labelledby="projects-heading">
       <h2 id="projects-heading" className=" text-2xl font-medium mb-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
-        Projects
+        React & Full-Stack Projects
       </h2>
       <motion.div
         variants={containerVariants}

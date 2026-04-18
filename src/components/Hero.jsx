@@ -48,17 +48,17 @@ const Hero = () => {
       </div>
       <div className="mt-12">
         <h1 className="text-3xl md:text-4xl text-white font-semibold tracking-tighter ">
-          Janak Shukla | Full-Stack Engineer
+          Janak Shukla | React Developer & Full-Stack Engineer
         </h1>
         <p className="text-xl mt-3 md:text-2xl text-gray-400 tracking-tighter ">
-          {" "}
-          20, Rewa | Fullstack Engineer{" "}
+          SD1 at WeframeTech | Rewa, India
         </p>
         <p className=" mt-3 text-gray-400 leading-snug ">
-          I’m Janak Shukla, currently working as SD1 at WeframeTech and
-          pursuing Computer Science Engineering. I build full-stack web
-          applications with React, Next.js, Node.js, and MongoDB, and love
-          turning ideas into fast, polished products.
+          I’m Janak Shukla, a React Developer and Full-Stack Engineer currently
+          working as SD1 at WeframeTech and pursuing Computer Science
+          Engineering. I build fast, scalable web applications with React,
+          Next.js, Node.js, and MongoDB, and love turning ideas into polished
+          products.
         </p>
       </div>
     </section>

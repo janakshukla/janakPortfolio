@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Host: janak-portfolio-eight.vercel.app
 
 Sitemap: https://janak-portfolio-eight.vercel.app/sitemap.xml

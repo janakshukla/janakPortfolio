@@ -23,7 +23,7 @@ const Skills = () => {
   return (
     <section id="skills" className="lg:mt-12 mt-4 " aria-labelledby="skills-heading">
       <h2 id="skills-heading" className=" text-2xl font-medium mb-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
-        Skills
+        React, Frontend & Full-Stack Skills
       </h2>
       <div className="flex flex-wrap gap-4" >
         {skills.map((skill, index) => {
