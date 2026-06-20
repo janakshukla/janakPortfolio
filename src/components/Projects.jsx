@@ -1,20 +1,49 @@
 import { motion } from "motion/react";
 
 export const Projects = () => {
-  const projects = [
+  const professionalProjects = [
+    {
+      title: "Increddy",
+      description:
+        "A robust e-commerce storefront engineered specifically for digital key handling, featuring seamlessly integrated ticketing systems and secure transactions.",
+      link: "https://increddy.com/",
+    },
+    {
+      title: "Festhey",
+      description:
+        "A comprehensive event management platform equipped with secure multi-role authentication and a dedicated student-event marketplace tailored for campus engagement.",
+      link: "https://festhey.agpro.co.in/",
+    },
+    {
+      title: "raxiview",
+      description:
+        "An AI-integrated application designed to assist developers by generating dynamic, high-quality mock technical interview questions.",
+      link: "https://raxiview.com/",
+    },
+    {
+      title: "Master Anesthesia",
+      description:
+        "A specialized EdTech platform engineered for medical students and anesthesia trainees. Built with Next.js, Payload CMS, and Medusa.js, the platform features complex course management, dynamic learning progress tracking, secure user authentication, and a scalable subscription-based enrollment infrastructure powered by GraphQL.",
+      link: "https://masteranesthesia.com/",
+    },
+  ];
+
+  const personalProjects = [
     {
       title: "E-timecapsule",
       description:
         "A time capsule web application where you can write your thoughts and save them for future viewing. Built with Next.js, Tailwind CSS, Prisma, MongoDB, Resend for email notifications, and deployed on Vercel.",
       codelink: "https://github.com/janakshukla/e-timecapsule",
       link: "https://e-timecapsule-vtd7-tau.vercel.app/",
-    },{
+    },
+    {
       title: "Dayui",
       description:
         "A UI inspiration library featuring multiple well-designed sections with public code examples. Continuously expanding with new sections and features, built using React.js and Tailwind CSS.",
       codelink: "https://github.com/janakshukla/Dayui",
       link: "https://dayui-sigma.vercel.app/",
-    },{
+    },
+    {
       title: "Multi-user Drawing Web",
       description:
         "A collaborative drawing application supporting multiple users in real-time. Share the link with friends and draw together, built with React.js and WebSocket for seamless real-time data sharing.",
@@ -42,80 +71,112 @@ export const Projects = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 28, scale: 0.96 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      scale: 1,
       transition: {
-        duration: 0.45,
+        duration: 0.6,
         ease: "easeOut",
       },
     },
   };
 
-  return (
-    <section id="projects" className="lg:mt-12 mt-4 " aria-labelledby="projects-heading">
-      <h2 id="projects-heading" className=" text-2xl font-medium mb-3 bg-gradient-to-r from-blue-500 to-cyan-600 text-transparent bg-clip-text">
-        React & Full-Stack Projects
-      </h2>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.18 }}
-        className="flex flex-wrap text-white gap-6"
-      >
-        {projects.map((project, index) => {
-          return (
-            <motion.div
-              variants={cardVariants}
-              whileHover={{ y: -6, scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-              key={index}
-              className="group relative overflow-hidden w-full lg:w-[calc(50%-12px)] bg-white/10 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-blue-400/60 transition-all duration-300"
+  const renderProject = (project, index) => (
+    <motion.div
+      variants={cardVariants}
+      key={index}
+      className="group flex flex-col border-t border-white/10 pt-6"
+    >
+      <div className="flex flex-col lg:flex-row justify-between lg:items-center mb-6 gap-4">
+        <h3 
+          className="text-3xl md:text-4xl text-gray-300 group-hover:text-white transition-colors duration-300"
+          style={{ fontFamily: "'Instrument Serif', serif" }}
+        >
+          {project.title}
+        </h3>
+        
+        <div className="flex items-center gap-6">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="text-[10px] md:text-xs tracking-[0.2em] uppercase font-sans text-white border-b border-white/30 hover:border-white pb-1 transition-colors duration-300"
             >
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-indigo-500/10" />
-              <div className="flex flex-col h-full">
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4 flex-grow leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex gap-3 mt-auto">
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors"
-                    >
-                      Live Demo
-                    </a>
-                  )}
-                  {project.codelink && (
-                    <a
-                      href={project.codelink}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-md text-sm font-medium transition-colors"
-                    >
-                      View Code
-                    </a>
-                  )}
-                </div>
+              Live Demo
+            </a>
+          )}
+          {project.codelink && (
+            <a
+              href={project.codelink}
+              target="_blank"
+              rel="noreferrer"
+              className="text-[10px] md:text-xs tracking-[0.2em] uppercase font-sans text-gray-500 border-b border-gray-500/30 hover:text-white hover:border-white pb-1 transition-colors duration-300"
+            >
+              View Code
+            </a>
+          )}
+        </div>
+      </div>
+
+      <p className="text-gray-400 font-light text-sm md:text-base leading-relaxed max-w-3xl">
+        {project.description}
+      </p>
+    </motion.div>
+  );
+
+  return (
+    <section id="projects" className="pt-12 md:pt-24 pb-8 md:pb-16 border-t border-white/10 mt-8 md:mt-16" aria-labelledby="projects-heading">
+      <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+        
+        {/* Left Side: Heading */}
+        <div className="w-full md:w-4/12 flex-shrink-0">
+          <h2 
+            id="projects-heading" 
+            className="text-5xl md:text-6xl text-white tracking-tight leading-none sticky top-24"
+            style={{ fontFamily: "'Instrument Serif', serif" }}
+          >
+            Selected <br />
+            <span className="italic text-gray-500">Works</span>
+          </h2>
+        </div>
+
+        {/* Right Side: Projects List */}
+        <div className="w-full md:w-8/12">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="flex flex-col gap-16"
+          >
+            {/* Professional Works */}
+            <div className="flex flex-col gap-10">
+              <h3 className="text-xs text-gray-500 font-sans tracking-[0.2em] uppercase border-b border-white/5 pb-2">Professional Engagements</h3>
+              <div className="flex flex-col gap-12">
+                {professionalProjects.map(renderProject)}
               </div>
-            </motion.div>
-          );
-        })}
-      </motion.div>
+            </div>
+
+            {/* Personal Works */}
+            <div className="flex flex-col gap-10 mt-8">
+              <h3 className="text-xs text-gray-500 font-sans tracking-[0.2em] uppercase border-b border-white/5 pb-2">Personal Projects</h3>
+              <div className="flex flex-col gap-12">
+                {personalProjects.map(renderProject)}
+              </div>
+            </div>
+
+          </motion.div>
+        </div>
+
+      </div>
     </section>
   );
 };
