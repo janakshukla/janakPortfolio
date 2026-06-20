@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import { Projects } from "./components/Projects";
+import GithubActivity from "./components/GithubActivity";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
 import { motion, useScroll } from "motion/react";
@@ -47,6 +48,7 @@ const App = () => {
             <main>
               <Skills />
               <Experience />
+              <GithubActivity />
               <Projects />
             </main>
             <Footer />
