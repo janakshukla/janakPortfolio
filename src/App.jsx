@@ -7,6 +7,8 @@ import { Projects } from "./components/Projects";
 import GithubActivity from "./components/GithubActivity";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
+import RandomCar from "./components/RandomCar";
+import CursorCat from "./components/CursorCat";
 import { motion, useScroll } from "motion/react";
 
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
     <>
       <Preloader onComplete={() => setLoading(false)} />
       <div className={`min-h-screen z-30 relative ${loading ? "opacity-0" : "opacity-100"} transition-opacity duration-1000`}>
+        <RandomCar />
+        <CursorCat />
         <div className=" flex justify-center    -z-10  bg-[linear-gradient(to_right,#73737320_1px,transparent_1px),linear-gradient(to_bottom,#73737320_1px,transparent_1px)] bg-[size:48px_48px]">
           {/* Elegant scroll progress curve */}
           <svg 

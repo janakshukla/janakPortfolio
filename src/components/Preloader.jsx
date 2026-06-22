@@ -27,7 +27,7 @@ const Preloader = ({ onComplete }) => {
     // 1. Truck drives in to the center
     tl.to(".truck-group", {
       x: 225, // Centers the 850px truck inside the 1400px viewBox
-      duration: 1.5,
+      duration: 0.8,
       ease: "power2.out"
     }, "in");
 
@@ -35,17 +35,17 @@ const Preloader = ({ onComplete }) => {
     tl.to(".wheel", {
       rotation: "+=720",
       transformOrigin: "50% 50%",
-      duration: 1.5,
+      duration: 0.8,
       ease: "power2.out"
     }, "in");
 
     // 2. Pause in the center for user to read
-    tl.to({}, { duration: 1.5 });
+    tl.to({}, { duration: 0.8 });
 
     // 3. Truck drives off-screen to the right
     tl.to(".truck-group", {
       x: 3000,
-      duration: 1.5,
+      duration: 0.8,
       ease: "power2.in"
     }, "out");
 
@@ -53,7 +53,7 @@ const Preloader = ({ onComplete }) => {
     tl.to(".wheel", {
       rotation: "+=720",
       transformOrigin: "50% 50%",
-      duration: 1.5,
+      duration: 0.8,
       ease: "power2.in"
     }, "out");
 
